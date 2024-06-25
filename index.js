@@ -8,8 +8,9 @@ function makeRows() {
         row.setAttribute("class", "row");
         for(let j = 0; j < 16; j++) {
             const square = document.createElement("div");
+            square.textContent = i;
             row.appendChild(square);
-            square.setAttribute("style", "border: 2px solid black; height: 50px; width: 50px")
+            square.setAttribute("style", "border: 2px solid black; height: 100%; width: 100%")
         }
     }
 }
