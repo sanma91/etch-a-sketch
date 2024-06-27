@@ -1,6 +1,6 @@
 const container = document.querySelector("#container");
 
-function makeRows() {
+function makeGrid() {
     for(let i = 0; i < 16; i++) {
         const row = document.createElement("div");
         container.appendChild(row);
@@ -10,8 +10,11 @@ function makeRows() {
             const square = document.createElement("div");
             row.appendChild(square);
             square.setAttribute("style", "border: 2px solid black; height: 100%; width: 100%");
+            square.addEventListener("mouseover", () => {
+                square.style.backgroundColor = "blue"
+            })
         }
     }
 }
 
-makeRows()
+makeGrid()
