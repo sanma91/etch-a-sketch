@@ -11,7 +11,11 @@ function makeGrid() {
             row.appendChild(square);
             square.setAttribute("style", "border: 2px solid black; height: 100%; width: 100%");
             square.addEventListener("mouseover", () => {
-                square.style.backgroundColor = "blue"
+                let rgb = [];
+                for(let k = 0; k < 3; k++) {
+                    rgb.push(Math.floor(Math.random() * 255))
+                }
+                square.style.backgroundColor = 'rgb('+ rgb.join(',') +')'
             })
         }
     }
