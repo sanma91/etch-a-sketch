@@ -1,9 +1,13 @@
-.row {
+body {
+    height: 100vh;
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto; /* prevent the page from scrolling due to the wievport height */
+    box-sizing: border-box; /* prevent the page from scrolling due to the viewport height */
 }
 
 #container {
-    height: 1000px;
-    width: 1000px;
-    margin: auto;;
+    height: 700px;
+    width: 700px;
 }
