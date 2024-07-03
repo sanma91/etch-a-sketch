@@ -1,12 +1,16 @@
 const container = document.querySelector("#container");
 
-function makeGrid() {
-    for(let i = 0; i < 16; i++) {
+const button = document.querySelector("button");
+
+function buttonPressed() {
+    button.addEventListener("click", () => {
+       let x = prompt("Choose the number of squares");
+       for(let i = 0; i < x; i++) {
         const row = document.createElement("div");
         container.appendChild(row);
         row.setAttribute("style", "height: 50px")
         row.setAttribute("class", "row");
-        for(let j = 0; j < 16; j++) {
+        for(let j = 0; j < x; j++) {
             const square = document.createElement("div");
             row.appendChild(square);
             square.setAttribute("style", "border: 2px solid black; height: 100%; width: 100%");
@@ -19,6 +23,7 @@ function makeGrid() {
             })
         }
     }
+    });
 }
 
-makeGrid()
+buttonPressed()
