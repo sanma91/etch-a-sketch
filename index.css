@@ -11,7 +11,6 @@ body {
 #container {
     height: 700px;
     width: 700px;
-    outline: 1px solid black;
 }
 
 #text {
